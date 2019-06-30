@@ -1,11 +1,11 @@
-box kura2i/wercker-box-test
+box: kura2i/wercker-box-test
 build:
   steps:
     - script:
         name: Compile sl command
         code: |
           make
-test:
+deploy:
   steps:
     - script:
         name: execute sl command
