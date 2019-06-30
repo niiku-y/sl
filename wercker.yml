@@ -6,12 +6,14 @@ build:
         name: Compile sl command
         code: |
           make
+          cp ./sl $WERCKER_OUTPUT_DIR/sl
 deploy:
   steps:
     - script:
         name: execute sl command
         code: |
-          sl
+          cp $WERCKER_OUTPUT_DIR/sl .
+          ./sl
 test:
   steps:
     - script:
