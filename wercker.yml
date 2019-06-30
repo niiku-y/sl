@@ -1,0 +1,14 @@
+box kura2i/wercker-box-test
+build:
+  steps:
+    - script:
+        name: Compile sl command
+        code: |
+          make
+test:
+  steps:
+    - script:
+        name: execute sl command
+        code: |
+          sl
+          
