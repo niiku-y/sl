@@ -12,4 +12,9 @@ deploy:
         name: execute sl command
         code: |
           sl
-          
+test:
+  steps:
+    - script:
+        name: unit test
+        code: |
+          echo "unit test"
