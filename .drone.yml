@@ -1,0 +1,11 @@
+# .drone.yml
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: kura2i/wercker-box-test:latest
+  commands:
+    - make
+    - ./sl
+    
